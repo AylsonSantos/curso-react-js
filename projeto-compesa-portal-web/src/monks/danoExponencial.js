@@ -1,0 +1,1 @@
+export const danoExponecial = ["Filtrar por dano potencial", "Baixo", "Médio", "Alto"]
