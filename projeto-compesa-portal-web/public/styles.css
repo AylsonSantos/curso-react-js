@@ -30,3 +30,24 @@
     font-weight: 600;
     color: white;
 }
+
+.sasb-navbar {
+    position: absolute;
+    z-index: 1;
+}
+
+.sasb-logo-navbar {
+    max-width: 300px;
+}
+
+.btn.btn-sasb-blue {
+    background-color: #223F99;
+    border-width: 1;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding-inline: 25px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+}

@@ -21,9 +21,8 @@ const Home = () => {
     <>
       <div>
         <NavBar setBusca ={setBusca} setCategoria ={setCategoria} setDano ={setDano} />
-        <Mapa />
-        listaBarragens={listaBarragens}
-       
+        <Mapa listaBarragens={listaBarragens} />
+        
       </div>
     </>
   );

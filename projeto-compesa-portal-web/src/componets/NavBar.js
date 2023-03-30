@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/sasb_compesa_logo.png";
+import { categorias } from "../monks/Categorias";
+import { danoExponecial } from "../monks/danoExponencial";
 import DropdownFilter from "./DropdownFilter";
 import SearchBar from "./SearchBar";
 
-const NavBar = () => {
+const NavBar = ({setBusca, setRisco, setDano}) => {
   return (
     <div className="container-fluid sasb-navbar">
       <div className="row py-4">
@@ -14,27 +16,34 @@ const NavBar = () => {
         </div>
 
         <div className="col-lg-3 col-md-12">
-          <SearchBar />
-        </div>
-
-        <div className="col-lg-2 col-md-12">
-          <DropdownFilter
-            options={["Filtrar por categoria de risco", "Baixo", "Médio", "Alto"]}
+          <SearchBar 
+          placeholder={"Digite o nome da Barragem"}
+          setBusca={setBusca}
           />
         </div>
 
         <div className="col-lg-2 col-md-12">
           <DropdownFilter
-            options={["Filtrar por dano potencial", "Baixo", "Médio", "Alto"]}
+          label={"Filtrar por Risco"}
+            options={categorias}
+            setFilter={setRisco}
           />
         </div>
 
         <div className="col-lg-2 col-md-12">
-          <Link to={"/login"}>
+          <DropdownFilter
+          label={"Filtar por dano"}
+            options={danoExponecial}
+            setFilter={setDano}
+          />
+        </div>
+
+        <div className="col-lg-2 col-md-12">
+        <Link to={"/login"}>
             <button className="btn btn-lg btn-sasb-blue sasb-shadow">
               ÁREA DO COLABORADOR
             </button>
-          </Link>
+            </Link>
         </div>
       </div>
     </div>

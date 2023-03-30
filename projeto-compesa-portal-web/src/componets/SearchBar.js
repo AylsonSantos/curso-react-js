@@ -1,3 +1,4 @@
+
 const SearchBar = (setBusca) => {
   return (
     <div className="input-group w-50" bis_skin_checked="1">
@@ -5,8 +6,8 @@ const SearchBar = (setBusca) => {
         type="text"
         className="form-control"
         placeholder="Digite o nome da barragem"
-        onKeyUp={setBusca}
-        style={{ borderRightStyle: "none" }}
+        onChange={(event) => {
+          setBusca(event.target.value); }}
       />
       <span className="input-group-text teste" id="basic-addon1">
         <svg
