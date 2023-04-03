@@ -16,7 +16,7 @@ export const buscaPorNome = (listaBarragem, nomeBusca) => {
     else {
         const regex = new RegExp(nomeBusca, 'i');
 
-        return listaBarragem.filter((listaBarrage => regex.test(listaBarrage.nome)));
+        return listaBarragem.filter((listaBarragem => regex.test(listaBarragem.nome)));
     }
 
 }
@@ -29,7 +29,7 @@ export const buscaPorCategoria = (listaBarragem, categoria) => {
     else {
         const regex = new RegExp(categoria, 'i');
 
-        return listaBarragem.filter((listaBarrage => regex.test(listaBarrage.seguranca.classificacaoDeRisco)));
+        return listaBarragem.filter((listaBarragem => regex.test(listaBarragem.seguranca.classificacaoDeRisco)));
     }
 
 }
@@ -42,7 +42,7 @@ export const buscaPorDano = (listaBarragem, dano) => {
     else {
         const regex = new RegExp(dano, 'i');
 
-        return listaBarragem.filter((listaBarrage => regex.test(listaBarrage.seguranca.classificacaoDeRisco)));
+        return listaBarragem.filter((listaBarragem => regex.test(listaBarragem.seguranca.classificacaoDeRisco)));
     }
 
 }

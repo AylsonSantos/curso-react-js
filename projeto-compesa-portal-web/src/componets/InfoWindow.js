@@ -1,5 +1,5 @@
 import { ImCancelCircle } from "react-icons/im";
-import { Link } from "react-router-dom";
+
 import { retornarStatus } from "../utils";
 
 const InfoWindow = ({ barragem, showInfo, setShowInfo, infoPosition }) => {
@@ -55,12 +55,12 @@ const InfoWindow = ({ barragem, showInfo, setShowInfo, infoPosition }) => {
         {retornarStatus(barragem.inspecao?.status)}
       </div>
 
-      <Link
+      {/* <Link
         className="d-flex justify-content-end link"
         to={`/barragem/detalhes/${barragem.id}`}
       >
         Ver Detalhes
-      </Link>
+      </Link> */}
     </div>
   );
 };

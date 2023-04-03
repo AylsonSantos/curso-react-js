@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import logo from "../assets/sasb_compesa_logo.png";
 import { categorias } from "../monks/Categorias";
 import { danoExponecial } from "../monks/danoExponencial";
@@ -39,11 +39,11 @@ const NavBar = ({setBusca, setRisco, setDano}) => {
         </div>
 
         <div className="col-lg-2 col-md-12">
-        <Link to={"/login"}>
+        {/* <Link to={"/login"}>
             <button className="btn btn-lg btn-sasb-blue sasb-shadow">
               ÁREA DO COLABORADOR
             </button>
-            </Link>
+            </Link> */}
         </div>
       </div>
     </div>

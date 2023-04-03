@@ -1,12 +1,13 @@
 import { Icon } from "@iconify/react";
 import DamIcon from "@iconify/icons-flat-color-icons/dam";
 import { useState } from "react";
-import InfoWindow from "./InfoWindow"
-import { barragens } from "../monks/barragens";
+import InfoWindow from "./InfoWindow";
 
-const Marker = ({ text }) => {
+
+
+const Marker = ({ barragem }) => {
   const [width, setWidth] = useState("15%");
-  const [showInfo, setShowInfo] = useState("true");
+  const [showInfo, setShowInfo] = useState(false);
   const [infoPosition, setInfoPosition] = useState("lt: 0, lng: 0");
 
   const handleMarkerClick = ({ lat, lng }) => {
@@ -22,18 +23,18 @@ const Marker = ({ text }) => {
         width={width}
         onMouseEnter={() => setWidth("20%")}
         onMouseLeave={() => setWidth("15%")}
-        onclick={() => 
+        onClick={() => 
           handleMarkerClick({
-            lat: barragens.localizacao?.latitude,
-            lng: barragens.localizacao?.longitude,
+            lat: barragem.localizacao?.latitude,
+            lng: barragem.localizacao?.longitude,
           })
         }
 
       />
-      <p className="marker-text">{text} </p>
+      <p className="marker-text">{barragem.nome} </p>
       {
       <InfoWindow
-      barragem={barragens}
+      barragem={barragem}
       showInfo={showInfo}
       setShowInfo={setShowInfo}
       infoPosition={infoPosition}

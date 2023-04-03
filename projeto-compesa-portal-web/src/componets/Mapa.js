@@ -19,9 +19,9 @@ const Mapa = ({listaBarragens}) => {
         {listaBarragens?.map((barragem, indice) => {
           return (
             <Marker 
-            lat={barragem.localizacao.latitude}
-            lng={barragem.localizacao.longitude}
-            text={barragem.nome}
+             lat={barragem.localizacao.latitude}
+             lng={barragem.localizacao.longitude}
+            barragem={barragem}
             key={indice}
             />
           )
