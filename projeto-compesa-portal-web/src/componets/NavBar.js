@@ -39,6 +39,9 @@ const NavBar = ({setBusca, setRisco, setDano}) => {
         </div>
 
         <div className="col-lg-2 col-md-12">
+        <button className="btn btn-lg btn-sasb-blue sasb-shadow">
+              ÁREA DO COLABORADOR
+            </button>
         {/* <Link to={"/login"}>
             <button className="btn btn-lg btn-sasb-blue sasb-shadow">
               ÁREA DO COLABORADOR
