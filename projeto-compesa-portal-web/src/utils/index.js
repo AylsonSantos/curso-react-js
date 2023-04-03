@@ -46,3 +46,29 @@ export const buscaPorDano = (listaBarragem, dano) => {
     }
 
 }
+
+export const aplicarEstilo = (info) => {
+    const infoLowerCase = info.toLowerCase();
+  
+    if (infoLowerCase === "em dia" || infoLowerCase === "entregue") {
+      return { color: "#078104", fontWeight: "bold" };
+    } else if (infoLowerCase === "a fazer" || infoLowerCase === "pendente") {
+      return { color: "#992020", fontWeight: "bold" };
+    } else {
+      return { color: "#979A00", fontWeight: "bold" };
+    }
+  };
+  
+  export const retornarStatus = (info, data) => {
+    const infoLowerCase = info.toLowerCase();
+  
+    if (infoLowerCase === "entregue") {
+      return (
+        <>
+          <span style={aplicarEstilo(info)}>{info}</span> no dia <b>{data}</b>
+        </>
+      );
+    } else {
+      return <span style={aplicarEstilo(info)}>{info}</span>;
+    }
+  };
